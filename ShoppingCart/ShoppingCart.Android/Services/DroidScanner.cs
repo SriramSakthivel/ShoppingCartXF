@@ -19,7 +19,7 @@ namespace ShoppingCart.Droid.Services
             _logger.Info("Starting the barcode scanner.  Stand back.");
 
             var context = Forms.Context;
-            var scanner = new MobileBarcodeScanner(context)
+            var scanner = new MobileBarcodeScanner()
             {
                 UseCustomOverlay = false,
                 BottomText = "Scanning will happen automatically",

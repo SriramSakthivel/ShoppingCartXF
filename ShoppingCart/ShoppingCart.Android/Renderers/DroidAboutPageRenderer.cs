@@ -40,8 +40,8 @@ namespace ShoppingCart.Droid.Renderers
         protected override void OnLayout(bool changed, int l, int t, int r, int b)
         {
             base.OnLayout(changed, l, t, r, b);
-            var msw = MeasureSpec.MakeMeasureSpec(r - l, MeasureSpecMode.Exactly);
-            var msh = MeasureSpec.MakeMeasureSpec(b - t, MeasureSpecMode.Exactly);
+            var msw = View.MeasureSpec.MakeMeasureSpec(r - l, MeasureSpecMode.Exactly);
+            var msh = View.MeasureSpec.MakeMeasureSpec(b - t, MeasureSpecMode.Exactly);
             view.Measure(msw, msh);
             view.Layout(0, 0, r - l, b - t);
         }

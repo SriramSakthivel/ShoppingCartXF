@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reactive.Linq;
+using System.Reactive.Threading.Tasks;
 using System.Threading.Tasks;
 
 namespace ShoppingCart.Services
@@ -18,7 +19,7 @@ namespace ShoppingCart.Services
         {
             try
             {
-                return await BlobCache.LocalMachine.GetObject<T>(key);
+                return await Task.Run(() => BlobCache.LocalMachine.GetObject<T>(key).FirstOrDefaultAsync().ToTask());
             }
             catch (KeyNotFoundException)
             {
@@ -28,12 +29,12 @@ namespace ShoppingCart.Services
 
         public async Task InsertObject<T>(string key, T value)
         {
-            await BlobCache.LocalMachine.InsertObject(key, value);
+            await Task.Run(()=> BlobCache.LocalMachine.InsertObject(key, value));
         }
 
         public async Task RemoveObject(string key)
         {
-            await BlobCache.LocalMachine.Invalidate(key);
+            await Task.Run(() => BlobCache.LocalMachine.Invalidate(key));
         }
     }
 }

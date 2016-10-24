@@ -1,10 +1,10 @@
 ﻿using System;
-using Xamarin.Behaviors;
+using Corcav.Behaviors;
 using Xamarin.Forms;
 
 namespace ShoppingCart.Behaviors
 {
-    public class AnimateSizeBehavior : Behavior<View>
+    public class AnimateSizeBehavior : Corcav.Behaviors.Behavior<View>
     {
         public static readonly BindableProperty EasingFunctionProperty = BindableProperty.Create<AnimateSizeBehavior, string>(
             p => p.EasingFunctionName,

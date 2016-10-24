@@ -11,11 +11,25 @@ using Xamarin.Forms;
 
 namespace ShoppingCart
 {
-    public static class App
+    public class App : Application
     {
         private static IContainer _container;
         private static NavigationPage _firstPage;
         private static NavigationService NaviService;
+
+        public App()
+        {
+            //MainPage = new ContentPage
+            //{
+            //    Content = new Label
+            //    {
+            //        Text = "Hello, Forms!",
+            //        VerticalOptions = LayoutOptions.CenterAndExpand,
+            //        HorizontalOptions = LayoutOptions.CenterAndExpand,
+            //    },
+            //};
+            MainPage = App.StartupPage;
+        }
 
         public static Color AccentColor { get; private set; }
 

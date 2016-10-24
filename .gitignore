@@ -1,0 +1,13 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/ShoppingCart/ShoppingCart.Android/bin/Debug
+/ShoppingCart/ShoppingCart.Android/obj/Debug
+/ShoppingCart/ShoppingCart/bin/Debug
+/ShoppingCart/ShoppingCart/obj/Debug
+/.vs/ShoppingCart/v14/.suo
+/ShoppingCart/ShoppingCart.WinPhone/obj/x86/Debug
+/ShoppingCart/ShoppingCart.WinPhone/Bin/x86/Debug
+*.user
+/ShoppingCart/ShoppingCart.iOS/obj/iPhone/Debug

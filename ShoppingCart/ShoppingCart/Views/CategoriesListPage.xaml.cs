@@ -1,6 +1,8 @@
-﻿namespace ShoppingCart.Views
+﻿using Xamarin.Forms;
+
+namespace ShoppingCart.Views
 {
-    public partial class CategoriesListPage
+    public partial class CategoriesListPage : ContentPage
     {
         public CategoriesListPage()
         {
